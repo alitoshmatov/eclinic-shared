@@ -1,5 +1,4 @@
-import { IsEnum, IsNotEmpty, IsString, NotEquals } from "class-validator";
-import { PartialType } from "@nestjs/mapped-types";
+import { IsEnum, IsNotEmpty,  IsOptional, IsString,  Matches, NotEquals } from "class-validator";
 
 export enum Role {
   ADMIN = "ADMIN",
@@ -18,6 +17,7 @@ export class CreateUser {
   lastName: string;
 
   @IsString()
+  @Matches( /\+998\d{9}$/)
   phoneNumber: string;
 
   @IsEnum(Role)
@@ -25,4 +25,22 @@ export class CreateUser {
   role: Role;
 }
 
-export class UpdateUser extends PartialType(CreateUser) {}
+export class UpdateUser {
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  firstName: string;
+
+  @IsString()
+  @IsNotEmpty()
+  lastName: string;
+
+  @IsString()
+  @IsOptional()
+  phoneNumber: string;
+
+  @IsEnum(Role)
+  @NotEquals(Role.ADMIN)
+  @IsOptional()
+  role: Role;
+}

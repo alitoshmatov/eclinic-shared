@@ -23,4 +23,21 @@ export class CreateService {
   departmentId: string;
 }
 
-export class UpdateService extends PartialType(CreateService) {}
+export class UpdateService {
+  @IsString()
+  @MinLength(3)
+  @IsOptional()
+  name: string;
+
+  @IsNumber()
+  @IsOptional()
+  price: number;
+
+  @IsString()
+  @IsOptional()
+  description: string;
+
+  @IsUUID()
+  @IsOptional()
+  departmentId: string;
+}
