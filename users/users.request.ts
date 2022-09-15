@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty, IsString, NotEquals } from "class-validator";
-import IsPhoneNumber from "shared/decorators/is-phone-number";
+import IsPhoneNumber from "../decorators/is-phone-number";
 import { PartialType } from "@nestjs/mapped-types";
 
 export enum Role {
