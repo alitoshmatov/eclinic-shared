@@ -1,4 +1,4 @@
-import { IsHash, IsJWT, IsNotEmpty, IsString } from "class-validator";
+  import { IsHash, IsJWT, IsNotEmpty, IsString } from "class-validator";
 
 export class LoginDto {
   @IsString()

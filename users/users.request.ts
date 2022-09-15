@@ -1,5 +1,4 @@
 import { IsEnum, IsNotEmpty, IsString, NotEquals } from "class-validator";
-import IsPhoneNumber from "../decorators/is-phone-number";
 import { PartialType } from "@nestjs/mapped-types";
 
 export enum Role {
@@ -18,7 +17,7 @@ export class CreateUser {
   @IsNotEmpty()
   lastName: string;
 
-  @IsPhoneNumber()
+  @IsString()
   phoneNumber: string;
 
   @IsEnum(Role)
