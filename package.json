@@ -17,6 +17,7 @@
   },
   "homepage": "https://gitlab.com/e-clinic1/shared#readme",
   "dependencies": {
+    "@nestjs/mapped-types": "^1.1.0",
     "class-validator": "^0.13.2"
   }
 }
