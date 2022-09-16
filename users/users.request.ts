@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty,  IsOptional, IsString,  Matches, NotEquals } from "class-validator";
+import { IsEnum, IsNotEmpty, IsOptional, IsString, Matches, NotEquals } from "class-validator";
 
 export enum Role {
   ADMIN = "ADMIN",
@@ -17,7 +17,7 @@ export class CreateUser {
   lastName: string;
 
   @IsString()
-  @Matches( /\+998\d{9}$/)
+  @Matches(/\+998\d{9}$/)
   phoneNumber: string;
 
   @IsEnum(Role)
@@ -29,18 +29,18 @@ export class UpdateUser {
   @IsString()
   @IsNotEmpty()
   @IsOptional()
-  firstName: string;
+  firstName?: string;
 
   @IsString()
   @IsNotEmpty()
-  lastName: string;
+  lastName?: string;
 
   @IsString()
   @IsOptional()
-  phoneNumber: string;
+  phoneNumber?: string;
 
   @IsEnum(Role)
   @NotEquals(Role.ADMIN)
   @IsOptional()
-  role: Role;
+  role?: Role;
 }
