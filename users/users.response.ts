@@ -8,3 +8,5 @@ export type User = {
   role: Role;
   phoneNumber: string | null;
 };
+
+export type UserList = User[];
