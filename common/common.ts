@@ -10,6 +10,13 @@ export enum Gender {
   FEMALE = "FEMALE",
 }
 
+
+export interface  Option {
+  label: string;
+  value: string | number;
+}
+
+
 export interface PaginationParams {
   page: number;
   limit?: number;

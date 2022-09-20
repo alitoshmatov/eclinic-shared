@@ -6,7 +6,8 @@ export type User = {
   lastName: string | null;
   username: string;
   role: Role;
+  departments: { id: string; name: string }[];
   phoneNumber: string | null;
 };
 
-export type UserList = User[];
+export type UserList = User;
