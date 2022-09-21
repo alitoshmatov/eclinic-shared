@@ -1,6 +1,6 @@
 import { Role } from "./users.request";
 
-export type User = {
+export interface User {
   id: string;
   firstName: string;
   lastName: string | null;
@@ -8,6 +8,6 @@ export type User = {
   role: Role;
   departments: { id: string; name: string }[];
   phoneNumber: string | null;
-};
+}
 
-export type UserList = User;
+export interface IUserList extends User {}

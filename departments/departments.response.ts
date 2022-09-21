@@ -4,6 +4,6 @@ export interface Department {
   name: string;
 }
 
-export interface DepartmentList extends Department {
+export interface IDepartmentList extends Department {
   isActive: boolean;
 }

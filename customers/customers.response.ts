@@ -1,4 +1,3 @@
-import { DepartmentList } from "shared/departments/departments.response";
 import { Gender } from "shared/common/common";
 
 export interface Customer {
@@ -11,4 +10,4 @@ export interface Customer {
   address?: string;
 }
 
-export interface CustomerList extends Customer {}
+export interface ICustomerList extends Customer {}

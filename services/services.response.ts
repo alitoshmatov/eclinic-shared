@@ -1,4 +1,4 @@
-export type Service = {
+export interface Service {
   id: string;
   code: number;
   name: string;
@@ -8,4 +8,6 @@ export type Service = {
     id: string;
   };
   price: number;
-};
+}
+
+export interface IServiceList extends Service {}
