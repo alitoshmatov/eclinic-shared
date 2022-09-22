@@ -3,6 +3,7 @@ export enum ErrorCode {
   NOT_FOUND = "NOT_FOUND",
   EXPIRED_TOKEN = "EXPIRED_TOKEN",
   LIMIT_PERMISSION = "LIMITED_PERMISSION",
+  UNIQUE_CONSTRAINT = "UNIQUE_CONSTRAINT",
 }
 
 export enum Gender {
@@ -10,12 +11,10 @@ export enum Gender {
   FEMALE = "FEMALE",
 }
 
-
-export interface  Option {
+export interface Option {
   label: string;
   value: string | number;
 }
-
 
 export interface PaginationParams {
   page: number;
