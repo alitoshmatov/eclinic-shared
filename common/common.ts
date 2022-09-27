@@ -6,6 +6,7 @@ export enum ErrorCode {
   DELETED_ITEM = "DELETED_ITEM",
   INVALID_RELATION = "INVALID_RELATION",
   UNIQUE_CONSTRAINT = "UNIQUE_CONSTRAINT",
+  INVALID_FIELD = "INVALID_FIELD",
 }
 
 export enum Gender {
@@ -26,4 +27,11 @@ export interface PaginationParams {
 export interface Pagination<T> {
   list: T[];
   count: number;
+}
+
+export enum PaymentType {
+  CASH = "CASH",
+  UZCARD = "UZCARD",
+  HUMO = "HUMO",
+  ONLINE = "ONLINE",
 }
