@@ -45,4 +45,8 @@ export class ServiceListQuery {
   @IsString()
   @IsOptional()
   q?: string;
+
+  @IsUUID()
+  @IsOptional()
+  department?: string;
 }
