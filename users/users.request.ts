@@ -67,3 +67,17 @@ export class UpdateUser {
   @IsOptional()
   departmentIds?: string[];
 }
+
+export class UsersListQuery {
+  @IsString()
+  @IsOptional()
+  q?: string;
+
+  @IsOptional()
+  @IsUUID()
+  department?: string;
+
+  @IsOptional()
+  @IsEnum(Role)
+  role?: Role;
+}
