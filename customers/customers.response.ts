@@ -7,7 +7,7 @@ export interface Customer {
   phoneNumber: string;
   gender: Gender;
   id: string;
-  address?: string;
+  address: string | null;
 }
 
-export interface ICustomerList extends Customer {}
+export interface ICustomerList extends Omit<Customer, "address"> {}
