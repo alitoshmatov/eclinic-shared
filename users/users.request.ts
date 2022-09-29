@@ -1,4 +1,5 @@
 import {
+  ArrayMinSize,
   IsEnum,
   IsNotEmpty,
   IsOptional,
@@ -37,6 +38,7 @@ export class CreateUser {
   @IsUUID(undefined, {
     each: true,
   })
+  @ArrayMinSize(1)
   departmentIds: string[];
 }
 
