@@ -2,8 +2,9 @@ import { PaymentType } from "../common/common";
 
 interface InvoiceLines {
   service: {
+    id: string;
     name: string;
-    code: number;
+    code: string;
   };
   price: number;
   quantity: number;
@@ -11,7 +12,7 @@ interface InvoiceLines {
     id: string;
     firstName: string;
     lastName: string;
-  };
+  } | null;
 }
 
 interface Customer {
