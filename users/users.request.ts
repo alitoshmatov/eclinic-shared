@@ -31,7 +31,7 @@ export class CreateUser {
 
   @IsEnum(Role)
   @NotEquals(Role.ADMIN)
-  role: Role;
+  role: Role | null;
 
   @ValidateIf((item) => item.role === Role.DOCTOR)
   @IsUUID(undefined, {
@@ -59,7 +59,7 @@ export class UpdateUser {
   @IsEnum(Role)
   @NotEquals(Role.ADMIN)
   @IsOptional()
-  role?: Role;
+  role?: Role | null;
 
   @IsUUID(undefined, {
     each: true,
