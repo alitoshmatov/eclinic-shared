@@ -1,4 +1,10 @@
-import { IsNumber, IsOptional, IsString, IsUUID, MinLength } from "class-validator";
+import {
+  IsNumber,
+  IsOptional,
+  IsString,
+  IsUUID,
+  MinLength,
+} from "class-validator";
 
 export class CreateService {
   @IsString()
@@ -33,4 +39,14 @@ export class UpdateService {
   @IsUUID()
   @IsOptional()
   departmentId?: string;
+}
+
+export class ServiceListQuery {
+  @IsString()
+  @IsOptional()
+  q?: string;
+
+  @IsUUID()
+  @IsOptional()
+  department?: string;
 }
