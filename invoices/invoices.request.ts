@@ -77,6 +77,13 @@ export class InvoiceListQuery {
   )
   isPaid?: boolean;
 
+  @IsBoolean()
+  @IsOptional()
+  @Transform(({ value }) =>
+    value === "true" ? true : value === "false" ? false : undefined
+  )
+  isDeleted?: boolean;
+
   @IsDateString()
   @IsOptional()
   startDate?: string;

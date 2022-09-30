@@ -58,4 +58,5 @@ export interface IInvoiceList {
   discount: number;
   isPaid: boolean;
   paymentType: PaymentType | null;
+  deletedAt?: string;
 }
