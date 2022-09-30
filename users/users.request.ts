@@ -66,6 +66,7 @@ export class UpdateUser {
   @IsUUID(undefined, {
     each: true,
   })
+  @ValidateIf((item) => item.role === Role.DOCTOR)
   @IsOptional()
   departmentIds?: string[];
 }
