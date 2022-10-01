@@ -39,6 +39,7 @@ export interface Invoice {
   invoiceLines: InvoiceLines[];
   deletedAt: string | null;
   deletedByUser: User | null;
+  paymentType?: PaymentType;
 }
 
 export interface IInvoiceList {

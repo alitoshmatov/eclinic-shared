@@ -8,7 +8,7 @@ import {
   Matches,
   NotEquals,
   ValidateIf,
-} from "class-validator";
+} from "@alitoshmatov/class-validator";
 
 export enum Role {
   ADMIN = "ADMIN",

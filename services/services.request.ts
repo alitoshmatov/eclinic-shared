@@ -1,10 +1,4 @@
-import {
-  IsNumber,
-  IsOptional,
-  IsString,
-  IsUUID,
-  MinLength,
-} from "class-validator";
+import { IsNumber, IsOptional, IsString, IsUUID, MinLength } from "@alitoshmatov/class-validator";
 
 export class CreateService {
   @IsString()

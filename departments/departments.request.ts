@@ -1,4 +1,4 @@
-import { IsUUID } from "class-validator";
+import { IsUUID } from "@alitoshmatov/class-validator";
 
 export class ActiveDepartments {
   @IsUUID(undefined, {

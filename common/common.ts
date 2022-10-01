@@ -1,4 +1,4 @@
-import { IsDateString, IsOptional } from "class-validator";
+import { IsDateString, IsOptional } from "@alitoshmatov/class-validator";
 
 export enum ErrorCode {
   INVALID_TOKEN = "INVALID_TOKEN",
