@@ -1,3 +1,5 @@
+import { IsDateString, IsOptional } from "class-validator";
+
 export enum ErrorCode {
   INVALID_TOKEN = "INVALID_TOKEN",
   NOT_FOUND = "NOT_FOUND",
@@ -34,4 +36,14 @@ export enum PaymentType {
   UZCARD = "UZCARD",
   HUMO = "HUMO",
   ONLINE = "ONLINE",
+}
+
+export class TimeInterval {
+  @IsDateString()
+  @IsOptional()
+  startDate?: string;
+
+  @IsDateString()
+  @IsOptional()
+  finishDate?: string;
 }
