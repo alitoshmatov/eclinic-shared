@@ -18,7 +18,7 @@ interface department {
   sum: number;
 }
 
-type paymentTypes = { [k in PaymentType]: number };
+export type paymentTypes = { [k in PaymentType]: number };
 
 export interface IncomeStatistics {
   doctors: doctor[];
