@@ -10,10 +10,12 @@ import {
   IsString,
   IsUUID,
   Min,
+  ValidateIf,
   ValidateNested,
 } from "@alitoshmatov/class-validator";
 import { Transform, Type } from "class-transformer";
 import { PaymentType } from "../common/common";
+import { Role } from "../users/users.request";
 
 export class Line {
   @IsUUID()
@@ -34,7 +36,12 @@ export class CreateInvoice {
 
   @IsOptional()
   @IsNumber()
-  discount: number;
+  @Min(0)
+  discount?: number;
+
+  @IsUUID()
+  @ValidateIf((item) => item.discount > 0)
+  discountId?: string;
 
   @IsArray()
   @ArrayMinSize(1)
@@ -49,6 +56,10 @@ export class UpdateInvoice {
   @IsOptional()
   @IsNumber()
   discount?: number;
+
+  @IsOptional()
+  @IsUUID()
+  discountId?: string;
 
   @IsArray()
   @ArrayMinSize(1)
@@ -72,12 +83,16 @@ export class InvoiceListQuery {
 
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }) => (value === "true" ? true : value === "false" ? false : undefined))
+  @Transform(({ value }) =>
+    value === "true" ? true : value === "false" ? false : undefined
+  )
   isPaid?: boolean;
 
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }) => (value === "true" ? true : value === "false" ? false : undefined))
+  @Transform(({ value }) =>
+    value === "true" ? true : value === "false" ? false : undefined
+  )
   isDeleted?: boolean;
 
   @IsDateString()
