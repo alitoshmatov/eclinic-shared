@@ -25,3 +25,10 @@ export interface IncomeStatistics {
   departments: department[];
   paymentTypes: paymentTypes;
 }
+
+export interface DiscountStatistics {
+  _sum: {
+    discount: number;
+  };
+  discountId: string | null;
+}
