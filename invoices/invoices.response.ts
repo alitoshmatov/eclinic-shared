@@ -1,3 +1,4 @@
+import { IDiscountList } from './../discounts/discount.response';
 import { PaymentType } from "../common/common";
 
 interface InvoiceLines {
@@ -34,6 +35,7 @@ export interface Invoice {
   createdAt: string;
   isPaid: boolean;
   discount: number;
+  discountType: IDiscountList;
   user: User;
   customer: Customer;
   invoiceLines: InvoiceLines[];
