@@ -63,12 +63,11 @@ export class UpdateInvoice {
 
   @IsArray()
   @ArrayMinSize(1)
-  @IsOptional()
   @ValidateNested({
     each: true,
   })
   @Type(() => Line)
-  lines?: Line[];
+  lines: Line[];
 }
 
 export class UpdatePayment {
