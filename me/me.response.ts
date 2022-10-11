@@ -12,5 +12,8 @@ export type GetMeResponse = {
     name: string;
     code: string;
     doctorLimit: number;
+    address: string | null;
+    phoneNumber: string | null;
+    link: string | null;
   };
 };
