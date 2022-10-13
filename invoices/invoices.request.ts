@@ -101,4 +101,13 @@ export class InvoiceListQuery {
   @IsDateString()
   @IsOptional()
   finishDate?: string;
+
+  @IsOptional()
+  @IsUUID()
+  customerId?: string;
+}
+
+export class UpdateNote {
+  @IsString()
+  note: string;
 }

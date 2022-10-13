@@ -1,7 +1,9 @@
-import { IDiscountList } from './../discounts/discount.response';
+import { IDiscountList } from "../discounts/discount.response";
 import { PaymentType } from "../common/common";
 
 interface InvoiceLines {
+  id: string;
+  note: string;
   service: {
     id: string;
     name: string;
