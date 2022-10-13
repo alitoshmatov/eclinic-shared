@@ -4,6 +4,7 @@ import { PaymentType } from "../common/common";
 interface InvoiceLines {
   id: string;
   note: string;
+  updatedAt: string | null;
   service: {
     id: string;
     name: string;
