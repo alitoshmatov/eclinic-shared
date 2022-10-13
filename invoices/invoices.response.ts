@@ -1,7 +1,7 @@
 import { IDiscountList } from "../discounts/discount.response";
 import { PaymentType } from "../common/common";
 
-interface InvoiceLines {
+export interface InvoiceLines {
   id: string;
   note: string;
   updatedAt: string | null;
