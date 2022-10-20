@@ -13,7 +13,7 @@ export interface CustomerHistory {
     id: string;
     firstName: string;
     lastName: string;
-  };
+  } | null;
   invoice: {
     id: string;
     isPaid: boolean;
@@ -21,6 +21,10 @@ export interface CustomerHistory {
   };
 }
 
+export interface CustomerHistoryList  {
+  count: number;
+  list: CustomerHistory[]
+}
 export interface DoctorHistory {
   id: string;
   createdAt: string;
