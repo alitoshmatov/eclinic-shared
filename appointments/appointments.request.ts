@@ -1,11 +1,4 @@
-import {
-  ArrayMinSize,
-  IsArray,
-  IsDateString,
-  IsOptional,
-  IsString,
-  IsUUID,
-} from "@alitoshmatov/class-validator";
+import { ArrayMinSize, IsArray, IsDateString, IsOptional, IsString, IsUUID } from "class-validator";
 
 export class CreateAppointment {
   @IsUUID()
