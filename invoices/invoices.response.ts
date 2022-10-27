@@ -45,6 +45,8 @@ export interface Invoice {
   deletedAt: string | null;
   deletedByUser: User | null;
   paymentType?: PaymentType;
+  paidAt: string | null;
+  paidByUser: User | null;
 }
 
 export interface IInvoiceList {

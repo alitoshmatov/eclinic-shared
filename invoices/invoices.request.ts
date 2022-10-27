@@ -12,7 +12,7 @@ import {
   Min,
   ValidateIf,
   ValidateNested,
-} from "@alitoshmatov/class-validator";
+} from "class-validator";
 import { Transform, Type } from "class-transformer";
 import { PaymentType } from "../common/common";
 import { Role } from "../users/users.request";
@@ -82,16 +82,12 @@ export class InvoiceListQuery {
 
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }) =>
-    value === "true" ? true : value === "false" ? false : undefined
-  )
+  @Transform(({ value }) => (value === "true" ? true : value === "false" ? false : undefined))
   isPaid?: boolean;
 
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }) =>
-    value === "true" ? true : value === "false" ? false : undefined
-  )
+  @Transform(({ value }) => (value === "true" ? true : value === "false" ? false : undefined))
   isDeleted?: boolean;
 
   @IsDateString()
