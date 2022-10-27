@@ -1,10 +1,4 @@
-import {
-  IsBoolean,
-  IsString,
-  MaxLength,
-  MinLength,
-} from "@alitoshmatov/class-validator";
-import { IsOptional } from "class-validator";
+import { IsBoolean, IsString, MaxLength, MinLength, IsOptional } from "class-validator";
 import { Transform } from "class-transformer";
 
 export class CreateDiscount {
@@ -17,8 +11,6 @@ export class CreateDiscount {
 export class DiscountsQuery {
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }) =>
-    value === "true" ? true : value === "false" ? false : undefined
-  )
+  @Transform(({ value }) => (value === "true" ? true : value === "false" ? false : undefined))
   all?: boolean;
 }
