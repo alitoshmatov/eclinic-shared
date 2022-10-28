@@ -1,4 +1,12 @@
-import { ArrayMinSize, IsArray, IsDateString, IsOptional, IsString, IsUUID } from "class-validator";
+import {
+  ArrayMinSize,
+  IsArray,
+  IsDateString,
+  IsOptional,
+  IsString,
+  IsUUID,
+} from "class-validator";
+import { Transform } from "class-transformer";
 
 export class CreateAppointment {
   @IsUUID()
@@ -46,6 +54,8 @@ export class AppointmentListQuery {
     each: true,
   })
   @IsOptional()
+  @IsArray()
+  @Transform(({ value }) => value.split(","))
   doctors?: string[];
 
   @IsDateString()
