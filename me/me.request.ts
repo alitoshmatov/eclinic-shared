@@ -35,9 +35,11 @@ export class TenantDetailsUpdate {
 
   @IsMilitaryTime()
   @IsOptional()
+  @IsString()
   startTime?: string;
 
   @IsMilitaryTime()
   @IsOptional()
+  @IsString()
   finishTime?: string;
 }
