@@ -1,5 +1,4 @@
 import {
-  ArrayMinSize,
   IsArray,
   IsDateString,
   IsOptional,
@@ -34,6 +33,7 @@ export class UpdateAppointment {
 
   @IsUUID()
   @IsOptional()
+  @IsString()
   customerId?: string;
 
   @IsDateString()

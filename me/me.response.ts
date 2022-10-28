@@ -15,5 +15,7 @@ export type GetMeResponse = {
     address: string | null;
     phoneNumber: string | null;
     link: string | null;
+    startTime: string | null;
+    finishTime: string | null;
   };
 };

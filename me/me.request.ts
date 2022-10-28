@@ -1,4 +1,9 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import {
+  IsMilitaryTime,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+} from "class-validator";
 
 export class changePasswordDto {
   @IsString()
@@ -8,4 +13,31 @@ export class changePasswordDto {
   @IsString()
   @IsNotEmpty()
   newPassword: string;
+}
+
+export class TenantDetailsUpdate {
+  @IsString()
+  @IsOptional()
+  @IsNotEmpty()
+  name?: string;
+
+  @IsString()
+  @IsOptional()
+  address?: string;
+
+  @IsString()
+  @IsOptional()
+  phoneNumber?: string;
+
+  @IsString()
+  @IsOptional()
+  qrLink?: string;
+
+  @IsMilitaryTime()
+  @IsOptional()
+  startTime?: string;
+
+  @IsMilitaryTime()
+  @IsOptional()
+  finishTime?: string;
 }
