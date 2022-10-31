@@ -21,7 +21,7 @@ export interface CustomerHistory {
   };
 }
 
-export interface CustomerHistoryList  {
+export interface ICustomerHistoryList  {
   count: number;
   list: CustomerHistory[]
 }
@@ -46,3 +46,6 @@ export interface DoctorHistory {
     };
   };
 }
+
+
+export interface IDoctorHistoryList extends DoctorHistory {}
