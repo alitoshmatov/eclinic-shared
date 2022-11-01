@@ -10,10 +10,11 @@ import { Transform } from "class-transformer";
 export class CreateAppointment {
   @IsUUID()
   doctorId: string;
-
-  @IsUUID()
+  // @IsUUID()
   @IsOptional()
+  @IsString()
   customerId?: string;
+
 
   @IsDateString()
   startTime: string;
@@ -31,7 +32,7 @@ export class UpdateAppointment {
   @IsOptional()
   doctorId?: string;
 
-  @IsUUID()
+  // @IsUUID()
   @IsOptional()
   @IsString()
   customerId?: string;
