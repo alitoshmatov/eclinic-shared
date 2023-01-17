@@ -1,4 +1,4 @@
-import { IsDateString, IsOptional } from "class-validator";
+import { IsDateString, IsNotEmpty, IsOptional } from "class-validator";
 
 export enum ErrorCode {
   INVALID_TOKEN = "INVALID_TOKEN",
@@ -47,4 +47,14 @@ export class TimeInterval {
   @IsDateString()
   @IsOptional()
   finishDate?: string;
+}
+
+export class RequiredTimeInterval {
+  @IsDateString()
+  @IsNotEmpty()
+  startDate: string;
+
+  @IsDateString()
+  @IsNotEmpty()
+  finishDate: string;
 }
