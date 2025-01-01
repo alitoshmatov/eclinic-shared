@@ -47,6 +47,7 @@ export interface Invoice {
   paymentType?: PaymentType;
   paidAt: string | null;
   paidByUser: User | null;
+  queue?: number;
 }
 
 export interface IInvoiceList {
