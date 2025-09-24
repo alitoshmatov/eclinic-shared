@@ -8,6 +8,8 @@ export interface Customer {
   gender: Gender;
   id: string;
   address: string | null;
+  isSelfRegistered: boolean;
+  telegramId: string | null;
 }
 
 export interface ICustomerList extends Omit<Customer, "address"> {}
