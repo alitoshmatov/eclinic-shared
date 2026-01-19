@@ -99,3 +99,15 @@ export interface DiscountAll {
   name: string;
   sum: string;
 }
+
+export interface HeatmapDataPoint {
+  weekday: number;
+  hour: number;
+  count: number;
+}
+
+export interface HeatmapStatistics {
+  startHour: number;
+  finishHour: number;
+  data: HeatmapDataPoint[];
+}
