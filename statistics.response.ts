@@ -86,6 +86,8 @@ export type IncomeByDoctor = {
   firstName: string;
   lastName: string;
   sum: string;
+  invoicesCount: number;
+  servicesCount: number;
 };
 
 export type IncomeByDepartment = {
@@ -98,4 +100,16 @@ export interface DiscountAll {
   id: string;
   name: string;
   sum: string;
+}
+
+export interface HeatmapDataPoint {
+  weekday: number;
+  hour: number;
+  count: number;
+}
+
+export interface HeatmapStatistics {
+  startHour: number;
+  finishHour: number;
+  data: HeatmapDataPoint[];
 }
