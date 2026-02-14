@@ -86,6 +86,8 @@ export type IncomeByDoctor = {
   firstName: string;
   lastName: string;
   sum: string;
+  invoicesCount: number;
+  servicesCount: number;
 };
 
 export type IncomeByDepartment = {
