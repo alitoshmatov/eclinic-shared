@@ -10,6 +10,7 @@ export interface Customer {
   address: string | null;
   isSelfRegistered: boolean;
   telegramId: string | null;
+  smsOptOut: boolean;
 }
 
 export interface ICustomerList extends Omit<Customer, "address"> {}

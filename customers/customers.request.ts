@@ -1,4 +1,4 @@
-import { IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString, Matches } from "class-validator";
+import { IsBoolean, IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString, Matches } from "class-validator";
 import { Gender } from "../common/common";
 
 export class CreateCustomer {
@@ -23,6 +23,10 @@ export class CreateCustomer {
   @IsOptional()
   @IsString()
   address: string;
+
+  @IsOptional()
+  @IsBoolean()
+  smsOptOut?: boolean;
 }
 
 export class UpdateCustomer {
@@ -53,6 +57,10 @@ export class UpdateCustomer {
   @IsString()
   @IsOptional()
   address?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  smsOptOut?: boolean;
 }
 
 export interface CustomersListQuery {
