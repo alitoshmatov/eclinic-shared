@@ -18,6 +18,7 @@ export interface ISmsNotificationConfig {
     checkupDays?: number;
   };
   templatePreviews: Record<SmsLanguage, ISmsTemplatePreview>;
+  templateConfirmed: Record<SmsLanguage, boolean>;
 }
 
 export interface ISmsSettings {

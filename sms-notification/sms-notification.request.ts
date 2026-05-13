@@ -24,7 +24,6 @@ export enum SmsNotificationType {
 export enum SmsLanguage {
   UZ = "UZ",
   RU = "RU",
-  EN = "EN",
 }
 
 export enum SmsLogStatus {
