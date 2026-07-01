@@ -19,6 +19,7 @@ export interface ISmsNotificationConfig {
   };
   templatePreviews: Record<SmsLanguage, ISmsTemplatePreview>;
   templateConfirmed: Record<SmsLanguage, boolean>;
+  templateEnabled: Record<SmsLanguage, boolean>;
 }
 
 export interface ISmsSettings {
