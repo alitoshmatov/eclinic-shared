@@ -40,6 +40,11 @@ export interface DoctorHistory {
     id: string;
     code: string;
     isPaid: boolean;
+    discount: number;
+    discountType: {
+      id: string;
+      name: string;
+    } | null;
     customer: {
       id: string;
       firstName: string;
